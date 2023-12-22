@@ -1,10 +1,10 @@
 import React from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 
-export default function Button({title}) {
+export default function Button({title,onPress}) {
   return (
     <View>
-      <Pressable style={styles.button}>
+      <Pressable onPress={onPress} style={styles.button}>
         <Text style={styles.text}> {title} </Text>
       </Pressable>
     </View>
@@ -23,5 +23,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     letterSpacing: 0.25,
     color: 'white',
+    textAlign:"center"
   },
 });
